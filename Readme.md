@@ -1,3 +1,5 @@
+### Description
+
 This application, written in c#/dotnet core, is a simple price comparer for an Ikea product (crrently one is upported). It exposes REST API. Once the GET request is received, the app downloads IKEA webpage for given product, parses the HTML to extract the price and then compares the obtained price with the price from cache/database. The price in cache (REDIS) comes from previous hits for given product. 
 If the price is lower than in the past, the information is returned that there is a discount. Otherwise, the information is returned that the price is the same, or higher.
 
@@ -21,6 +23,7 @@ The rest of the application (domain) remains the same for both runs because the 
 
 
 ### Instruction for running the application locally
+
 This application uses Redis database.
 If you would like to run this application locally with local Redis then install Redis for Windows:
 https://github.com/MicrosoftArchive/redis/releases
