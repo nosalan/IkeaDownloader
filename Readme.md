@@ -16,9 +16,11 @@ Direction arrow represents who initiates the communication. In case of IKEA and 
 In case of REST API the direction is inbound, it's the customer that makes the request to the application. 
 
 Once the outbound dependencies are abstracted behind an interface, they can be mocked or faked, so the component test is testing the entire domain logic. Different implementation of the interface is provided in the production run and different in the test run.
+
 For example, the IKEA Webpage is abstracted behind IPageDownloader interface.
 - for production run, the interface is implemented by real http connection to IKEA webpage,
 - for test run, the interface is mocked to provide different responses according to test scenarios.
+
 The rest of the application (domain) remains the same for both runs because the domain dependes on the interface only. 
 
 
